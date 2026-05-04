@@ -45,3 +45,20 @@ static int count_clips(const double *v, int n) {
 static int check_tolerance(double rms) {
     return (rms >= 207.0 && rms <= 253.0) ? 1 : 0;
 }
+
+PhaseMetrics analyse_phase(const WaveformSample *samples, int n, PhaseSelector selector) {
+    PhaseMetrics m;
+    double *voltages = (double *)malloc(n * sizeof(double));
+    for (int i = 0; i < n; i++) voltages[i] = selector(&samples[i]);
+    m.rms_voltage   = compute_rms(voltages, n);
+    m.peak_to_peak  = compute_peak_to_peak(voltages, n);
+    m.dc_offset     = compute_mean(voltages, n);
+    m.std_deviation = compute_std(voltages, n, m.dc_offset, &m.variance);
+    m.clip_count    = count_clips(voltages, n);
+    m.in_tolerance  = check_tolerance(m.rms_voltage);
+    m.health_flags  = 0;
+    if (m.clip_count > 0) m.health_flags |= 0x01;
+    if (!m.in_tolerance)  m.health_flags |= 0x02;
+    free(voltages);
+    return m;
+}
