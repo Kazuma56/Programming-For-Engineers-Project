@@ -1,11 +1,10 @@
 # ninja log v7
-6	87	7996056546721332	CMakeFiles/Programming_For_Engineers_Project.dir/main.c.obj	6a68ca368833da51
-6	94	7996043983726593	CMakeFiles/Programming_For_Engineers_Project.dir/io.c.obj	49857ac64ce29dbd
-8	119	7995991027263834	CMakeFiles/Programming_For_Engineers_Project.dir/waveform.c.obj	ae05873b4371aabf
-87	192	7996056547534840	Programming_For_Engineers_Project.exe	551b17c62b17789
-4	152	7996126888915085	build.ninja	62468afd9fc09aea
-4	152	7996126888915085	E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug/cmake_install.cmake	62468afd9fc09aea
 22	106	7996126889773725	CMakeFiles/Programming_For_Engineers_Project.dir/main.c.obj	6a68ca368833da51
-25	115	7996126889802489	CMakeFiles/Programming_For_Engineers_Project.dir/waveform.c.obj	ae05873b4371aabf
 29	123	7996126889851281	CMakeFiles/Programming_For_Engineers_Project.dir/io.c.obj	49857ac64ce29dbd
+25	115	7996126889802489	CMakeFiles/Programming_For_Engineers_Project.dir/waveform.c.obj	ae05873b4371aabf
 123	237	7996126890783525	Programming_For_Engineers_Project.exe	551b17c62b17789
+4	152	7996253475030785	build.ninja	62468afd9fc09aea
+11	88	7996253535247636	CMakeFiles/Programming_For_Engineers_Project.dir/main.c.obj	ab253628bcd5abe7
+15	99	7996253535288240	CMakeFiles/Programming_For_Engineers_Project.dir/waveform.c.obj	ec9a522cf12a25d
+20	107	7996253535339366	CMakeFiles/Programming_For_Engineers_Project.dir/io.c.obj	537312a7457837a1
+107	199	7996253536207282	Programming_For_Engineers_Project.exe	551b17c62b17789
