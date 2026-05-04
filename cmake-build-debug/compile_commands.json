@@ -1,0 +1,20 @@
+[
+{
+  "directory": "E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles\\Programming_For_Engineers_Project.dir\\main.c.obj -c \"E:\\Porgramming For Engineers Project\\Programming For Engineers Project\\main.c\"",
+  "file": "E:/Porgramming For Engineers Project/Programming For Engineers Project/main.c",
+  "output": "E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug/CMakeFiles/Programming_For_Engineers_Project.dir/main.c.obj"
+},
+{
+  "directory": "E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles\\Programming_For_Engineers_Project.dir\\waveform.c.obj -c \"E:\\Porgramming For Engineers Project\\Programming For Engineers Project\\waveform.c\"",
+  "file": "E:/Porgramming For Engineers Project/Programming For Engineers Project/waveform.c",
+  "output": "E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug/CMakeFiles/Programming_For_Engineers_Project.dir/waveform.c.obj"
+},
+{
+  "directory": "E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles\\Programming_For_Engineers_Project.dir\\io.c.obj -c \"E:\\Porgramming For Engineers Project\\Programming For Engineers Project\\io.c\"",
+  "file": "E:/Porgramming For Engineers Project/Programming For Engineers Project/io.c",
+  "output": "E:/Porgramming For Engineers Project/Programming For Engineers Project/cmake-build-debug/CMakeFiles/Programming_For_Engineers_Project.dir/io.c.obj"
+}
+]

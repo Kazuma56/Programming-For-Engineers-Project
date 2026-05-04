@@ -1,0 +1,45 @@
+==============================
+  POWER QUALITY REPORT
+==============================
+  Source: E:\Porgramming For Engineers Project\Programming For Engineers Project\power_quality_log.csv | Samples: 1000 | Generated: 2026-05-04 13:08:18
+
+--- Phase A ---
+  RMS Voltage    : 230.9352 V
+  Peak-to-Peak   : 651.4883 V
+  DC Offset      : 1.307860 V
+  Std Deviation  : 230.9315 V
+  Variance       : 53329.3470 V^2
+  Clipped Samples: 29
+  Tolerance      : PASS
+  Health Flags   : 0x01
+
+--- Phase B ---
+  RMS Voltage    : 229.9884 V
+  Peak-to-Peak   : 651.2332 V
+  DC Offset      : 0.007859 V
+  Std Deviation  : 229.9884 V
+  Variance       : 52894.6519 V^2
+  Clipped Samples: 30
+  Tolerance      : PASS
+  Health Flags   : 0x01
+
+--- Phase C ---
+  RMS Voltage    : 229.9948 V
+  Peak-to-Peak   : 651.1497 V
+  DC Offset      : 0.007857 V
+  Std Deviation  : 229.9948 V
+  Variance       : 52897.6040 V^2
+  Clipped Samples: 30
+  Tolerance      : PASS
+  Health Flags   : 0x01
+
+--- System ---
+  Avg RMS        : 230.3061 V
+  Avg Frequency  : 50.0008 Hz
+  Avg Power Factor: 0.9499
+  Avg THD        : 2.0996 %
+  Total Clips    : 89
+  All In Tolerance: YES
+  Status         : NON-COMPLIANT
+
+==============================
