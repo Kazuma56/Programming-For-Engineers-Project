@@ -1,7 +1,7 @@
 ==============================
   POWER QUALITY REPORT
 ==============================
-  Source: power_quality_log.csv | Samples: 1000 | Generated: 2026-05-04 14:27:09
+  Source: E:\Porgramming For Engineers Project\Programming For Engineers Project\power_quality_log.csv | Samples: 1000 | Generated: 2026-05-04 14:48:10
 
 --- Phase A ---
   RMS Voltage    : 230.9352 V
