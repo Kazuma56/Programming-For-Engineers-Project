@@ -1,7 +1,6 @@
 #include "io.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 
 #define MAX_LINE 512
@@ -9,13 +8,21 @@
 int load_csv(const char *filename, WaveformSample **out) {
     FILE *fp = fopen(filename, "r");
     if (!fp) { fprintf(stderr, "Error: could not open '%s'\n", filename); return 0; }
+
     char line[MAX_LINE];
-    fgets(line, MAX_LINE, fp);
+    fgets(line, MAX_LINE, fp); // Skip header
+
     int count = 0;
-    while (fgets(line, MAX_LINE, fp)) if (line[0] != '\n') count++;
+    while (fgets(line, MAX_LINE, fp)) {
+        if (line[0] != '\n') count++;
+    }
+
     if (count == 0) { fclose(fp); return 0; }
+
     *out = (WaveformSample *)malloc(count * sizeof(WaveformSample));
-    rewind(fp); fgets(line, MAX_LINE, fp);
+    rewind(fp);
+    fgets(line, MAX_LINE, fp); // Skip header again
+
     int idx = 0;
     WaveformSample *p = *out;
     while (fgets(line, MAX_LINE, fp) && idx < count) {
@@ -65,8 +72,10 @@ void print_report(const char *source, const PhaseMetrics *A, const PhaseMetrics 
 void write_report(const char *filename, const char *source, const PhaseMetrics *A, const PhaseMetrics *B, const PhaseMetrics *C, const SystemMetrics *sys, int n) {
     FILE *fp = fopen(filename, "w");
     if (!fp) { fprintf(stderr, "Error: could not write '%s'\n", filename); return; }
+
     time_t now = time(NULL); char tb[64];
     strftime(tb, sizeof(tb), "%Y-%m-%d %H:%M:%S", localtime(&now));
+
     fprintf(fp, "==============================\n  POWER QUALITY REPORT\n==============================\n");
     fprintf(fp, "  Source: %s | Samples: %d | Generated: %s\n", source, n, tb);
     print_phase(fp, "Phase A", A);
@@ -74,6 +83,7 @@ void write_report(const char *filename, const char *source, const PhaseMetrics *
     print_phase(fp, "Phase C", C);
     print_system(fp, sys);
     fprintf(fp, "\n==============================\n");
+
     fclose(fp);
     printf("Report written to '%s'\n", filename);
 }
