@@ -62,3 +62,17 @@ PhaseMetrics analyse_phase(const WaveformSample *samples, int n, PhaseSelector s
     free(voltages);
     return m;
 }
+
+SystemMetrics analyse_system(const WaveformSample *samples, int n, const PhaseMetrics *A, const PhaseMetrics *B, const PhaseMetrics *C) {
+    SystemMetrics sys;
+    sys.avg_rms          = (A->rms_voltage + B->rms_voltage + C->rms_voltage) / 3.0;
+    sys.total_clips      = A->clip_count + B->clip_count + C->clip_count;
+    sys.all_in_tolerance = A->in_tolerance && B->in_tolerance && C->in_tolerance;
+    double freq_sum = 0.0, pf_sum = 0.0, thd_sum = 0.0;
+    const WaveformSample *p = samples;
+    for (int i = 0; i < n; i++, p++) { freq_sum += p->frequency; pf_sum += p->power_factor; thd_sum += p->thd_percent; }
+    sys.avg_frequency    = freq_sum / n;
+    sys.avg_power_factor = pf_sum  / n;
+    sys.avg_thd          = thd_sum / n;
+    return sys;
+}
