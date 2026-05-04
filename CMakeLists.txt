@@ -12,4 +12,4 @@ add_executable(Programming_For_Engineers_Project
     io.c
 )
 
-target_link_libraries(Programming_For_Engineers_Project m)CMakeLists.txt not found in E:\Porgramming For Engineers Project Select CMakeLists.txt
+target_link_libraries(Programming_For_Engineers_Project m)
